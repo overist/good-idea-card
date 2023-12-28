@@ -10,7 +10,7 @@ import firestore from "@react-native-firebase/firestore";
 
 GoogleSignin.configure({
   webClientId:
-    "1058690863960-e5rk540qjk489080t1v94ed5405m4hj6.apps.googleusercontent.com",
+    "1058690863960-bsmqgvgbr1ercvvlade7itsoeev0n1kb.apps.googleusercontent.com",
 });
 
 export default function GoogleAuthButton({ Trigger }) {
@@ -32,19 +32,22 @@ export default function GoogleAuthButton({ Trigger }) {
       );
       const user = userCredential.user;
 
-      // firestore에 user 정보가 있는지 확인
+      // firestore에 유저정보가 있는지 확인
       const userDoc = await firestore().collection("users").doc(user.uid).get();
-      if (userDoc.data().username) {
+      console.log(userDoc);
+
+      if (userDoc.data()?.email) {
+        // 유저정보가 있음 - 로그인
         handleAuth(user, setUserState, resetUserState, navigation);
         return;
+      } else {
+        // 유저정보가 없음 - 회원가입(firestore에 user 정보 저장)
+        await firestore().collection("users").doc(user.uid).set({
+          email: user.email,
+        });
+
+        handleAuth(user, setUserState, resetUserState, navigation);
       }
-
-      // firestore에 user 정보 저장
-      await firestore().collection("users").doc(user.uid).set({
-        email: user.email,
-      });
-
-      handleAuth(user, setUserState, resetUserState, navigation);
     } catch (error) {
       console.error(error);
     }

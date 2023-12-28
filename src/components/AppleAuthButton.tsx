@@ -32,7 +32,7 @@ export default function AppleAuthButton({ Trigger }) {
 
       // firestore에 user 정보가 있는지 확인
       const userDoc = await firestore().collection("users").doc(user.uid).get();
-      if (userDoc.data().username) {
+      if (userDoc.data().email) {
         handleAuth(user, setUserState, resetUserState, navigation);
         return;
       }

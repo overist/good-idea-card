@@ -33,7 +33,7 @@
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
-          <string>com.googleusercontent.apps.564130301164-6e73sgqv4pj6167ei9tkaukgpo3r4tn3</string>
+          <string>com.googleusercontent.apps.1058690863960-bsmqgvgbr1ercvvlade7itsoeev0n1kb</string>
         </array>
       </dict>
       <dict>
@@ -65,7 +65,7 @@
     <key>NSMicrophoneUsageDescription</key>
     <string>Allow $(PRODUCT_NAME) to access your microphone</string>
     <key>NSPhotoLibraryUsageDescription</key>
-    <string>The app accesses your photos to let you share them with your friends.</string>
+    <string>Allow $(PRODUCT_NAME) to access your photos</string>
     <key>UILaunchStoryboardName</key>
     <string>SplashScreen</string>
     <key>UIRequiredDeviceCapabilities</key>

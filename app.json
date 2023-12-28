@@ -12,12 +12,6 @@
       "backgroundColor": "#9C39FF"
     },
     "plugins": [
-      [
-        "expo-image-picker",
-        {
-          "photosPermission": "The app accesses your photos to let you share them with your friends."
-        }
-      ],
       "@react-native-firebase/app",
       [
         "expo-build-properties",
@@ -45,11 +39,6 @@
       "package": "ist.over.goodIdeaCard",
       "permissions": ["android.permission.RECORD_AUDIO"],
       "googleServicesFile": "./google-services.json"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "1fa61a09-1f2f-42e0-9102-9859072c129f"
-      }
     }
   }
 }

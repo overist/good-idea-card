@@ -5,6 +5,7 @@ import {
   Text,
   StatusBar,
   View,
+  Button,
 } from "react-native";
 import React, { useEffect } from "react";
 import auth from "@react-native-firebase/auth";
@@ -13,6 +14,8 @@ import type { StackNavigationProp } from "@react-navigation/stack";
 import { useResetRecoilState, useRecoilValue } from "recoil";
 import { userAtom } from "../../store/atoms";
 import Toast from "react-native-toast-message";
+import GoogleAuthButton from "../../components/GoogleAuthButton";
+import AppleAuthButton from "../../components/AppleAuthButton";
 
 export default function HomeScreen() {
   const navigation = useNavigation<StackNavigationProp<any>>();
@@ -24,6 +27,12 @@ export default function HomeScreen() {
       <StatusBar barStyle={"default"} />
       <View style={styles.header}>
         <Text style={styles.title}>HOME</Text>
+        <GoogleAuthButton
+          Trigger={({ onPress }) => <Button title="google" onPress={onPress} />}
+        />
+        <AppleAuthButton
+          Trigger={({ onPress }) => <Button title="apple" onPress={onPress} />}
+        />
       </View>
     </SafeAreaView>
   );

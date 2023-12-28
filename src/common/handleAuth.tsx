@@ -24,15 +24,11 @@ export const handleAuth = async (
   try {
     const userDoc = await firestore().collection("users").doc(user.uid).get();
 
-    if (userDoc.data().username) {
+    if (userDoc.data().email) {
       console.log("firestore user", userDoc);
       setUserState({
         uid: user.uid,
         email: userDoc.data()?.email,
-        username: userDoc.data()?.username,
-        gender: userDoc.data()?.gender,
-        birth: userDoc.data()?.birth,
-        imageUrl: userDoc.data()?.imageUrl,
       });
       navigation.replace("bottom");
     } else {
