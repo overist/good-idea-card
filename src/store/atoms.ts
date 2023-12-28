@@ -10,14 +10,27 @@ export const userAtom = atom({
   effects_UNSTABLE: [ReactNativeRecoilPersist.persistAtom],
 });
 
-export type BookMarkType = {
-  id: number;
-  content: string;
-  author: string;
+export type BookmarkType = {
+  wisdomId: string;
+  createdAt: string;
 };
 
-export const bookMarkListAtom = atom<BookMarkType[]>({
-  key: "bookMarkList",
+export const bookmarkListAtom = atom<BookmarkType[]>({
+  key: "bookmarkList",
+  default: [],
+  effects_UNSTABLE: [ReactNativeRecoilPersist.persistAtom],
+});
+
+export type WisdomType = {
+  author: string;
+  title: string;
+  content: string;
+  createdAt: string;
+  type: string;
+};
+
+export const wisdomListAtom = atom<WisdomType[]>({
+  key: "wisdomList",
   default: [],
   effects_UNSTABLE: [ReactNativeRecoilPersist.persistAtom],
 });
