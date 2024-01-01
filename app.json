@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "Good Idea Card",
+    "slug": "GoodIdeaCard",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "src/assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "src/assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#9C39FF"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ],
+      "@react-native-firebase/app",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ],
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ov3rist.rntemplate",
+      "googleServicesFile": "./GoogleService-Info.plist"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "src/assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.ov3rist.rntemplate",
+      "permissions": ["android.permission.RECORD_AUDIO"],
+      "googleServicesFile": "./google-services.json"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1fa61a09-1f2f-42e0-9102-9859072c129f"
+      }
+    }
+  }
+}
