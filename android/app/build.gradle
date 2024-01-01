@@ -81,9 +81,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace 'com.ov3rist.rntemplate'
+    namespace 'ist.over.goodIdeaCard'
     defaultConfig {
-        applicationId 'com.ov3rist.rntemplate'
+        applicationId 'ist.over.goodIdeaCard'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

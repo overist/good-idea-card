@@ -14,5 +14,6 @@ web-build/
 .DS_Store
 
 # google api
-# google-services.json
-# GoogleService-Info.plist
+google-services.json
+GoogleService-Info.plist
+android/app/google-services.json

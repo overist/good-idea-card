@@ -34,7 +34,7 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.ov3rist.rntemplate",
+      "bundleIdentifier": "ist.over.goodIdeaCard",
       "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
@@ -42,7 +42,7 @@
         "foregroundImage": "src/assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.ov3rist.rntemplate",
+      "package": "ist.over.goodIdeaCard",
       "permissions": ["android.permission.RECORD_AUDIO"],
       "googleServicesFile": "./google-services.json"
     },

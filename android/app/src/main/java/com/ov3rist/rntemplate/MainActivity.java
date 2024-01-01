@@ -1,4 +1,4 @@
-package com.ov3rist.rntemplate;
+package ist.over.goodIdeaCard;
 
 import android.os.Build;
 import android.os.Bundle;

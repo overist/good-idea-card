@@ -23,14 +23,11 @@ export default function SplashScreen() {
 
           setUserState({
             uid: userId,
-            email: userDoc.data()?.email,
-            username: userDoc.data()?.username,
-            gender: userDoc.data()?.gender,
-            birth: userDoc.data()?.birth,
-            imageUrl: userDoc.data()?.imageUrl,
+            email: "",
           });
         } else {
           console.log("No user data found!");
+
           resetUserState();
         }
       } catch (error) {

@@ -14,7 +14,7 @@ import { useResetRecoilState, useRecoilValue } from "recoil";
 import { userAtom } from "../../store/atoms";
 import Toast from "react-native-toast-message";
 
-export default function HomeScreen() {
+export default function SettingScreen() {
   const navigation = useNavigation<StackNavigationProp<any>>();
   const resetUserState = useResetRecoilState(userAtom);
   const userState = useRecoilValue(userAtom);
@@ -23,7 +23,7 @@ export default function HomeScreen() {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle={"default"} />
       <View style={styles.header}>
-        <Text style={styles.title}>HOME</Text>
+        <Text style={styles.title}>Setting</Text>
       </View>
     </SafeAreaView>
   );

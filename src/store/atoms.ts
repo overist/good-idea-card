@@ -6,26 +6,18 @@ export const userAtom = atom({
   default: {
     uid: "",
     email: "",
-    username: "",
-    gender: 0,
-    birth: "",
-    imageUrl: "",
   },
   effects_UNSTABLE: [ReactNativeRecoilPersist.persistAtom],
 });
 
-export type ChatRoomType = {
-  matchId: string;
-  role: "publisher" | "subscriber";
-  partnerId: string;
-  partnerName: string;
-  partnerImageUrl: string;
-  partnerGender: number;
-  timestamp: number;
+export type BookMarkType = {
+  id: number;
+  content: string;
+  author: string;
 };
 
-export const chatRoomAtom = atom<ChatRoomType[]>({
-  key: "chatRoom",
+export const bookMarkListAtom = atom<BookMarkType[]>({
+  key: "bookMarkList",
   default: [],
   effects_UNSTABLE: [ReactNativeRecoilPersist.persistAtom],
 });

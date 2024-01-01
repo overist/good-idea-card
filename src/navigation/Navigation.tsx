@@ -17,17 +17,7 @@ export default function Navigation() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={isLoggedIn ? "bottom" : "login"}>
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="login"
-          component={LoginScreen}
-        />
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="join"
-          component={JoinScreen}
-        />
+      <Stack.Navigator initialRouteName={"bottom"}>
         <Stack.Screen
           options={{ headerShown: false }}
           name="bottom"
